@@ -2,17 +2,18 @@ package Assignment1Greenest;
 
 public class Cactus extends Plants {
 
-    private double mineralWaterInLitres = 0.02;
 
-    public Cactus(double mineralWaterInLitres) {
-        this.mineralWaterInLitres = mineralWaterInLitres;
+    public Cactus(double height, String name) {
+        super(height, name);
+    }
+    @Override
+    public double plantLiquidInLitres() {
+        return 0.02;
     }
 
-    public double getMineralWaterInLitres() {
-        return mineralWaterInLitres;
-    }
+    @Override
+    public String getLiquidType() {
+        return Liquid.WATER.getLiquid();
 
-    public void setMineralWaterInLitres(double mineralWaterInLitres) {
-        this.mineralWaterInLitres = mineralWaterInLitres;
     }
 }

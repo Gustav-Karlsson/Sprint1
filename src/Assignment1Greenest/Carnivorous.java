@@ -2,17 +2,15 @@ package Assignment1Greenest;
 
 public class Carnivorous extends Plants {
 
-    private double proteinLiquidInLitres = 0.1 + (getHeight() * 0.5);
-
-    public Carnivorous(double proteinLiquidInLitres) {
-        this.proteinLiquidInLitres = proteinLiquidInLitres;
+    public Carnivorous(double height, String name) {
+        super(height, name);
     }
-
-    public double getProteinLiquidInLitres() {
-        return proteinLiquidInLitres;
+    @Override
+    public double plantLiquidInLitres() {
+        return 0.1 + (0.2 * getHeight());
     }
-
-    public void setProteinLiquidInLitres(double proteinLiquidInLitres) {
-        this.proteinLiquidInLitres = proteinLiquidInLitres;
+    @Override
+    public String getLiquidType() {
+        return Liquid.PROTEIN_FLUID.getLiquid();
     }
 }

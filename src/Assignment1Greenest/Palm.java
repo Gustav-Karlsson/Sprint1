@@ -2,19 +2,16 @@ package Assignment1Greenest;
 
 public class Palm extends Plants {
 
-    private double tapWaterInLitres = getHeight() * 0.5;
-
-    public Palm (double tapWaterInLitres){
-
-        this.tapWaterInLitres = tapWaterInLitres;
-
+    public Palm(double height, String name) {
+        super(height, name);
     }
-
-    public double getTapWaterInLitres() {
-        return tapWaterInLitres;
+    @Override
+    public double plantLiquidInLitres() {
+        return 0.5 * getHeight();
     }
-
-    public void setTapWaterInLitres(double tapWaterInLitres) {
-        this.tapWaterInLitres = tapWaterInLitres;
+    @Override
+    public String getLiquidType() {
+        return Liquid.MINERAL_WATER.getLiquid();
     }
 }
+
