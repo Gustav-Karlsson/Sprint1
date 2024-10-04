@@ -3,8 +3,8 @@ package Assignment1Greenest;
 public abstract class Plants implements Irrigate {
     //implementerar från irrigate så att varje enskild subklass inte behöver göra det.
 
-    private double height;
-    private String name;
+    private final double height;
+    private final String name;
 
     //inkapsling
     public Plants( double height, String name ) {
