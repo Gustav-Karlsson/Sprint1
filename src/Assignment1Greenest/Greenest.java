@@ -1,8 +1,9 @@
 package Assignment1Greenest;
 
 import javax.swing.*;
+import java.util.Objects;
 
-    public class Greenest {
+public class Greenest {
         public static void main(String[] args) {
 
             Plants[] plantsCheckedIn = {
@@ -17,23 +18,16 @@ import javax.swing.*;
                 break;
             }
 
-            String userInput = null;
+            String plantWateringMessage = null;
             for (Plants plant : plantsCheckedIn){
                 if (waterPlant.equalsIgnoreCase(plant.getName())){
                     double requiredLiquid = plant.plantLiquidInLitres();
                     String liquidType = plant.getLiquidType();
-                    userInput = plant.getName() + " needs " + requiredLiquid + " liters of " + liquidType + "a day.";
-                    break;
+                    plantWateringMessage = plant.getName() + " needs " + requiredLiquid + " liters of " + liquidType + "a day.";
                 }
 
             }
-            if (userInput != null){
-                JOptionPane.showMessageDialog(null, userInput);
-            } else {
-                JOptionPane.showMessageDialog(null, "No plant found with the name: " + waterPlant);
-                break;
-
-            }
+            JOptionPane.showMessageDialog(null, Objects.requireNonNullElseGet(plantWateringMessage, () -> "No plant found with the name: " + waterPlant));
         }
 
         }
