@@ -17,17 +17,10 @@ public abstract class Plants implements Irrigate {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
     public abstract String getLiquidType(); //Polymorfism, de olika klasserna får egna vätske typer
     public abstract double plantLiquidInLitres(); //Polymorfism, de olika klasserna får egen mängd vätska
 }
