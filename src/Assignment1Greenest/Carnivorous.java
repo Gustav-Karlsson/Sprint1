@@ -1,6 +1,6 @@
 package Assignment1Greenest;
 
-public class Carnivorous extends Plants {
+public class Carnivorous extends Plants { //Subklass
 
     public Carnivorous(double height, String name) {
         super(height, name);

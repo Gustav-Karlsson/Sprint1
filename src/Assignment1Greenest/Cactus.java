@@ -1,6 +1,6 @@
 package Assignment1Greenest;
 
-public class Cactus extends Plants {
+public class Cactus extends Plants { //Subklass
 
 
     public Cactus(double height, String name) {
